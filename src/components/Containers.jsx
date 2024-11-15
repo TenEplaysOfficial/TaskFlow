@@ -111,30 +111,28 @@ function Containers() {
                   {popupSettings.isOpen &&
                     popupSettings.containerId === container.id && (
                       <div
-                          className="absolute bg-white border border-gray-300 rounded shadow p-4 w-[7%] text-center space-y-1"
-                          style={{
-                            top: `${popupSettings.position.top}px`,
-                            left: `${popupSettings.position.left}px`,
-                          }}
-                        >
-                          {/* <p>This is the settings popup!</p>
+                        className="absolute bg-white border border-gray-300 rounded shadow p-4 lg:w-[7%] text-center space-y-1"
+                        style={{
+                          top: `${popupSettings.position.top}px`,
+                          left: `${popupSettings.position.left}px`,
+                        }}
+                      >
+                        {/* <p>This is the settings popup!</p>
                       <button onClick={handleClose} className="mt-2 p-1 bg-red-500 text-white rounded">
                       Close
                       </button>
                       Add more settings options here */}
-                          <button
-                            onClick={() => handleEditContainer(container)}
-                          >
-                            Edit
-                          </button>
-                          <hr></hr>
-                          <button
-                            onClick={() => handleDeleteContainer(container.id)}
-                            className="text-red-500"
-                          >
-                            Delete
-                          </button>
-                        </div>
+                        <button onClick={() => handleEditContainer(container)}>
+                          Edit
+                        </button>
+                        <hr></hr>
+                        <button
+                          onClick={() => handleDeleteContainer(container.id)}
+                          className="text-red-500"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     )}
 
                   <div className="flex-1">

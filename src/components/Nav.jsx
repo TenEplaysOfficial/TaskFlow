@@ -26,7 +26,7 @@ function Nav() {
       <div>
         <button
           onClick={handleToggle}
-          className="bg-indigo-500 text-white py-2 px-4 border-none font-semibold rounded-lg hover:shadow-lg transform duration-300 hover:bg-indigo-600 hover:scale-[102%]"
+          className="bg-indigo-500 text-white text-sm sm:text-lg py-2 px-4 border-none font-semibold rounded-lg hover:shadow-lg transform duration-300 hover:bg-indigo-600 hover:scale-[102%]"
         >
           Add Container
         </button>
