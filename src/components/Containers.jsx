@@ -4,6 +4,7 @@ import ContainerCardHandler from "./forms/ContainerCardHandler";
 import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { toast } from "sonner";
 
 function Containers() {
   const { data, add, remove, updateContainerTitle } = useContext(AppContext);
@@ -60,11 +61,13 @@ function Containers() {
 
   const handleSubmitEdit = (newTitle) => {
     updateContainerTitle(activeContainer, newTitle);
-    setIsEditing(false);
+        toast.success(`Container updated successfully: ${newTitle}`);
+        setIsEditing(false);
   };
 
   const handleDeleteContainer = (containerId) => {
     remove(containerId, "container");
+    toast.success("Container and its subtasks deleted successfully!")
     handleClose();
   };
 

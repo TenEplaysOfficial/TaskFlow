@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 function App() {
   return (
     <>
-        <Toaster richColors/>
+        <Toaster/>
         <div className="mx-auto max-w-7xl px-4 pt-8">
           <Routes>
             <Route path="/" index element={<Home />} />
